@@ -11,6 +11,12 @@ Examples you'll find:
 - Use of Parse SDK
 - Use of Google Analytics, setting up trackers, logging events, etc
 
+Notes:
+- You'll need to provide your own raw json files
+- An example json files is included in the main shared 'raw' folder
+- You'll find some random mess here and there, this was mostly a hack project, not a serious endeavour 
+
+
 
  DO WHAT THE FUCK YOU WANT TO PUBLIC LICENSE 
                     Version 2, December 2004 
