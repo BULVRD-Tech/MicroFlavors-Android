@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="8dp"
+    android:orientation="vertical">
+
+    <ImageView
+        android:src="@mipmap/ic_launcher"
+        android:layout_gravity="center"
+        android:layout_marginTop="4dp"
+        android:layout_width="48dp"
+        android:layout_height="48dp" />
+
+    <com.devspark.robototextview.widget.RobotoTextView
+        app:typeface="roboto_thin"
+        android:text="@string/app_name"
+        android:layout_gravity="center"
+        android:layout_marginTop="4dp"
+        android:textSize="26sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <com.devspark.robototextview.widget.RobotoTextView
+        android:visibility="gone"
+        android:text="@string/about_built_by"
+        android:layout_gravity="center"
+        android:textSize="22sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <com.devspark.robototextview.widget.RobotoTextView
+        app:typeface="roboto_light"
+        android:id="@+id/about_version_text"
+        android:text="v1.0.0 b1"
+        android:layout_marginBottom="4dp"
+        android:layout_gravity="center"
+        android:textSize="16sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <View
+        android:background="@color/black_overlay"
+        android:layout_width="match_parent"
+        android:layout_height="1dp" />
+
+    <com.devspark.robototextview.widget.RobotoTextView
+        app:typeface="roboto_light"
+        android:id="@+id/about_zeen_remove"
+        android:gravity="center"
+        android:padding="8dp"
+        android:textSize="14sp"
+        android:text="@string/about_zeen_remove"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <View
+        android:id="@+id/about_zeen_divider"
+        android:background="@color/black_overlay"
+        android:layout_width="match_parent"
+        android:layout_height="1dp" />
+
+    <com.devspark.robototextview.widget.RobotoTextView
+        app:typeface="roboto_light"
+        android:id="@+id/about_zeen_dev"
+        android:gravity="center"
+        android:layout_gravity="center"
+        android:padding="16dp"
+        android:textSize="22sp"
+        android:text="@string/about_zeen_dev"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <View
+        android:background="@color/black_overlay"
+        android:layout_width="match_parent"
+        android:layout_height="1dp" />
+
+    <com.devspark.robototextview.widget.RobotoTextView
+        app:typeface="roboto_light"
+        android:id="@+id/about_email"
+        android:gravity="center"
+        android:layout_gravity="center"
+        android:padding="16dp"
+        android:textSize="22sp"
+        android:text="@string/about_email"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <View
+        android:background="@color/black_overlay"
+        android:layout_width="match_parent"
+        android:layout_height="1dp" />
+
+    <com.devspark.robototextview.widget.RobotoTextView
+        app:typeface="roboto_light"
+        android:id="@+id/about_twitter"
+        android:gravity="center"
+        android:layout_gravity="center"
+        android:padding="16dp"
+        android:textSize="22sp"
+        android:text="@string/about_twitter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <View
+        android:background="@color/black_overlay"
+        android:layout_width="match_parent"
+        android:layout_height="1dp" />
+
+    <com.devspark.robototextview.widget.RobotoTextView
+        android:gravity="bottom"
+        android:layout_gravity="center"
+        android:padding="4dp"
+        android:layout_weight="1"
+        android:textSize="15sp"
+        android:text="@string/about_built_by"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent" />
+
+    <ImageView
+        android:id="@+id/about_carto"
+        android:src="@mipmap/cartaware_logo"
+        android:layout_width="match_parent"
+        android:layout_height="48dp" />
+
+</LinearLayout>

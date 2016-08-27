@@ -1,0 +1,292 @@
+buildscript {
+    repositories {
+        mavenCentral()
+        maven {
+            url 'https://maven.fabric.io/public'
+        }
+        jcenter()
+
+    }
+
+    dependencies {
+        classpath 'io.fabric.tools:gradle:1.+'
+        classpath 'com.neenbedankt.gradle.plugins:android-apt:1.7'
+    }
+}
+apply plugin: 'com.android.application'
+apply plugin: 'io.fabric'
+apply plugin: 'android-apt'
+
+repositories {
+    maven {
+        url 'https://maven.fabric.io/public'
+    }
+
+}
+
+
+android {
+    compileSdkVersion 24
+    buildToolsVersion "24.0.0"
+
+    defaultConfig {
+        applicationId "com.zeen.reststopper"
+        minSdkVersion 15
+        targetSdkVersion 24
+        versionCode 12
+        versionName "1.0.12"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    productFlavors{
+        restarea{
+            applicationId "com.zeen.reststopper"
+        }
+
+        themepark{
+            applicationId "com.zeen.themepark"
+        }
+
+        historic{
+            applicationId "com.zeen.historic"
+        }
+
+        brews{
+            applicationId "com.zeen.brewsfind"
+        }
+
+        murica{
+            applicationId "com.zeen.america.discover"
+        }
+
+        wine{
+            applicationId "com.zeen.winefind"
+        }
+
+        castle{
+            applicationId "com.zeen.castle"
+        }
+
+        zipcode{
+            applicationId "com.zeen.zipcode"
+        }
+
+        festival{
+            applicationId "com.zeen.festivals"
+        }
+
+        horses{
+            applicationId "com.zeen.horsetracks"
+        }
+
+        waterfalls{
+            applicationId "com.zeen.waterfalls"
+        }
+
+        caves{
+            applicationId "com.zeen.caves"
+        }
+
+        fishpiers{
+            applicationId "com.zeen.fishpiers"
+        }
+
+        pizza{
+            applicationId "com.zeen.pizzajoints"
+        }
+    }
+
+    sourceSets {
+        main {
+            java {
+                srcDir 'src/main/java'
+            }
+            res {
+                srcDir 'src/main/res'
+            }
+            assets {
+                srcDir 'src/main/assets'
+            }
+            manifest {
+                srcFile 'src/main/AndroidManifest.xml'
+            }
+        }
+
+        themepark {
+            java {
+                srcDir 'src/themepark/java'
+            }
+            res {
+                srcDir 'src/themepark/res'
+            }
+        }
+
+        historic {
+            java {
+                srcDir 'src/historic/java'
+            }
+            res {
+                srcDir 'src/historic/res'
+            }
+        }
+
+        brews {
+            java {
+                srcDir 'src/brews/java'
+            }
+            res {
+                srcDir 'src/brews/res'
+            }
+        }
+
+        murica {
+            java {
+                srcDir 'src/murica/java'
+            }
+            res {
+                srcDir 'src/murica/res'
+            }
+        }
+
+        wine{
+            java {
+                srcDir 'src/wine/java'
+            }
+            res {
+                srcDir 'src/wine/res'
+            }
+        }
+
+        castle{
+            java {
+                srcDir 'src/castle/java'
+            }
+            res {
+                srcDir 'src/castle/res'
+            }
+        }
+
+        zipcode{
+            java {
+                srcDir 'src/zipcode/java'
+            }
+            res {
+                srcDir 'src/zipcode/res'
+            }
+        }
+
+        festival{
+            java {
+                srcDir 'src/festival/java'
+            }
+            res {
+                srcDir 'src/festival/res'
+            }
+        }
+
+        horses{
+            java{
+                srcDir 'src/equstrian/java'
+            }
+
+            res{
+                srcDir 'src/equstrian/res'
+            }
+        }
+
+        waterfalls{
+            java{
+                srcDir 'src/waterfalls/java'
+            }
+
+            res{
+                srcDir 'src/waterfalls/res'
+            }
+        }
+
+        caves{
+            java{
+                srcDir 'src/caves/java'
+            }
+
+            res{
+                srcDir 'src/caves/res'
+            }
+        }
+
+        fishpiers{
+            java{
+                srcDir 'src/fishpiers/java'
+            }
+
+            res{
+                srcDir 'src/fishpiers/res'
+            }
+        }
+
+        pizza{
+            java{
+                srcDir 'src/pizza/java'
+            }
+
+            res{
+                srcDir 'src/pizza/res'
+            }
+        }
+    }
+
+    packagingOptions {
+        exclude 'META-INF/LICENSE-FIREBASE.txt'
+        exclude 'META-INF/DEPENDENCIES.txt'
+        exclude 'META-INF/DEPENDENCIES'
+        exclude 'META-INF/dependencies.txt'
+        exclude 'META-INF/LICENSE.txt'
+        exclude 'META-INF/LICENSE'
+        exclude 'META-INF/license.txt'
+        exclude 'META-INF/LGPL2.1'
+        exclude 'META-INF/NOTICE.txt'
+        exclude 'META-INF/NOTICE'
+        exclude 'META-INF/notice.txt'
+    }
+
+    lintOptions {
+        checkReleaseBuilds false
+        abortOnError false
+    }
+}
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    compile 'com.android.support:cardview-v7:23.2.1'
+    compile 'com.android.support:support-v4:23.2.1'
+    compile 'com.android.support:appcompat-v7:23.2.1'
+    compile 'com.google.android.gms:play-services-location:+'
+    compile 'com.google.android.gms:play-services-maps:+'
+    compile 'com.google.android.gms:play-services-analytics:+'
+    compile 'com.jakewharton:butterknife:7.0.1'
+    compile 'com.github.johnkil.android-robototextview:robototextview:+'
+    compile 'com.melnykov:floatingactionbutton:+'
+    compile('io.nlopez.smartlocation:library:3.2.0') {
+        transitive = true
+    }
+    compile 'com.github.castorflex.smoothprogressbar:library-circular:+'
+    compile 'com.nispok:snackbar:2.10.+'
+    compile 'com.google.code.gson:gson:+'
+    compile 'com.airbnb.android:airmapview:1.3.2'
+    compile 'com.squareup.retrofit:retrofit:1.9.0'
+    compile('com.crashlytics.sdk.android:crashlytics:2.5.0@aar') {
+        transitive = true;
+    }
+    compile 'cat.ereza:customactivityoncrash:+'
+    compile 'com.parse.bolts:bolts-android:1.+'
+    compile 'com.kobakei:ratethisapp:0.0.3'
+    compile 'com.github.hotchemi:permissionsdispatcher:1.2.1'
+    compile 'com.koushikdutta.ion:ion:+'
+    apt 'com.github.hotchemi:permissionsdispatcher-processor:1.2.1'
+}
